@@ -71,6 +71,7 @@ struct MoviesHome : View {
     var body: some View {
         NavigationView {
             Group {
+                AdView(viewModel: .init())
                 switch homeMode {
                 case .list:
                     homeAsList

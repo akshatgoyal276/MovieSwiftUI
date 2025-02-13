@@ -9,10 +9,11 @@
 import UIKit
 import SwiftUI
 import SwiftUIFlux
+import AdsFramework
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
-
+    let objAdster = AdsterProvider()
     var window: UIWindow?
     
     func application(_ application: UIApplication,
@@ -26,6 +27,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         window.rootViewController = controller
         self.window = window
         window.makeKeyAndVisible()
+        
+        AdSter.sharedInstance().start(completionHandler: { status in
+            print("Ad initialized \(status)")
+        })
         return true
     }
 }

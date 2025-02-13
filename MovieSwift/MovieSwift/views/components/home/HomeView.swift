@@ -18,6 +18,7 @@ let store = Store<AppState>(reducer: appStateReducer,
 @main
 struct HomeView: App {
     let archiveTimer: Timer
+    @UIApplicationDelegateAdaptor(AppDelegate.self) var appDelegate
     
     init() {
         archiveTimer = Timer.scheduledTimer(withTimeInterval: 30.0, repeats: true, block: { _ in

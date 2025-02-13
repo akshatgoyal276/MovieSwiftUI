@@ -3,10 +3,15 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 52;
+	objectVersion = 54;
 	objects = {
 
 /* Begin PBXBuildFile section */
+		188CA1E52D5BA2B40008F664 /* AdsFramework.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = 188CA1E42D5BA2B40008F664 /* AdsFramework.xcframework */; };
+		188CA1E62D5BA2B40008F664 /* AdsFramework.xcframework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 188CA1E42D5BA2B40008F664 /* AdsFramework.xcframework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		188CA1E82D5BA5710008F664 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 188CA1E72D5BA56F0008F664 /* AppDelegate.swift */; };
+		188CA1EA2D5BA6890008F664 /* AdView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 188CA1E92D5BA6860008F664 /* AdView.swift */; };
+		18DAAE322D5BB81000FBB53E /* BannerAdView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18DAAE312D5BB80900FBB53E /* BannerAdView.swift */; };
 		6902647122B6CC8600459C2E /* MoviesCrewList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6902647022B6CC8600459C2E /* MoviesCrewList.swift */; };
 		6902647322B6CE3200459C2E /* Keyword.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6902647222B6CE3200459C2E /* Keyword.swift */; };
 		6902647522B6CF6000459C2E /* MovieKeywords.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6902647422B6CF6000459C2E /* MovieKeywords.swift */; };
@@ -57,7 +62,6 @@
 		69414A3923C35BF70056FBDF /* CustomList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69DEA9A722B904CB00DFF551 /* CustomList.swift */; };
 		69414A3A23C35BF70056FBDF /* Image.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6918454422BD7CB20011E742 /* Image.swift */; };
 		69414A3B23C35BF70056FBDF /* DiscoverFilter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 696B43E622BF9E3D008B3D56 /* DiscoverFilter.swift */; };
-		69414A3E23C35C1A0056FBDF /* CloudKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 69414A3D23C35C190056FBDF /* CloudKit.framework */; };
 		69414A4023C35C1D0056FBDF /* SwiftUIFlux in Frameworks */ = {isa = PBXBuildFile; productRef = 69414A3F23C35C1D0056FBDF /* SwiftUIFlux */; };
 		69414A4123C35C320056FBDF /* FjallaOne-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 69FC640822C3A72F0043AB37 /* FjallaOne-Regular.ttf */; };
 		69414A4223C35C320056FBDF /* American Captain.otf in Resources */ = {isa = PBXBuildFile; fileRef = 6918810022C2949800E2E253 /* American Captain.otf */; };
@@ -152,6 +156,7 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
+				188CA1E62D5BA2B40008F664 /* AdsFramework.xcframework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -159,6 +164,10 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		188CA1E42D5BA2B40008F664 /* AdsFramework.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; name = AdsFramework.xcframework; path = "../../orchestration-sdk-ios/Frameworks/AdsFramework.xcframework"; sourceTree = "<group>"; };
+		188CA1E72D5BA56F0008F664 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		188CA1E92D5BA6860008F664 /* AdView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdView.swift; sourceTree = "<group>"; };
+		18DAAE312D5BB80900FBB53E /* BannerAdView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BannerAdView.swift; sourceTree = "<group>"; };
 		6902647022B6CC8600459C2E /* MoviesCrewList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoviesCrewList.swift; sourceTree = "<group>"; };
 		6902647222B6CE3200459C2E /* Keyword.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Keyword.swift; sourceTree = "<group>"; };
 		6902647422B6CF6000459C2E /* MovieKeywords.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieKeywords.swift; sourceTree = "<group>"; };
@@ -192,7 +201,6 @@
 		69414A1523C33FC10056FBDF /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		69414A1823C33FC10056FBDF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		69414A1A23C33FC10056FBDF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		69414A3D23C35C190056FBDF /* CloudKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CloudKit.framework; path = Platforms/AppleTVOS.platform/Developer/SDKs/AppleTVOS13.2.sdk/System/Library/Frameworks/CloudKit.framework; sourceTree = DEVELOPER_DIR; };
 		69414A5523C360C90056FBDF /* MoviesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoviesView.swift; sourceTree = "<group>"; };
 		694219F922CF3D3B008004A2 /* BottomMenu.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BottomMenu.swift; sourceTree = "<group>"; };
 		6953B50622D36A9900859723 /* LoggingMiddleware.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoggingMiddleware.swift; sourceTree = "<group>"; };
@@ -275,7 +283,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				69414A3E23C35C1A0056FBDF /* CloudKit.framework in Frameworks */,
 				69414A4023C35C1D0056FBDF /* SwiftUIFlux in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -286,6 +293,7 @@
 			files = (
 				69D3321223ED608400C8A20C /* UI in Frameworks */,
 				69D3321023ED608400C8A20C /* Backend in Frameworks */,
+				188CA1E52D5BA2B40008F664 /* AdsFramework.xcframework in Frameworks */,
 				69FB7D7B22E7957200C55F01 /* SwiftUIFlux in Frameworks */,
 				69F336CD22EDA77500282CE3 /* CloudKit.framework in Frameworks */,
 			);
@@ -343,7 +351,7 @@
 		69305F6322CFBF9900C4FE07 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				69414A3D23C35C190056FBDF /* CloudKit.framework */,
+				188CA1E42D5BA2B40008F664 /* AdsFramework.xcframework */,
 				69F336CC22EDA77500282CE3 /* CloudKit.framework */,
 			);
 			name = Frameworks;
@@ -563,6 +571,8 @@
 		69B2560922AAD1C5009F4413 /* components */ = {
 			isa = PBXGroup;
 			children = (
+				18DAAE312D5BB80900FBB53E /* BannerAdView.swift */,
+				188CA1E92D5BA6860008F664 /* AdView.swift */,
 				6967C88022E8F5D500BA49B1 /* fan club */,
 				692AA63022AD3FEF0054DA84 /* home */,
 				691F7A0522E6D79200755E44 /* moviesHome */,
@@ -705,6 +715,7 @@
 		69FFAF7E22A99F1100801F3C /* MovieSwift */ = {
 			isa = PBXGroup;
 			children = (
+				188CA1E72D5BA56F0008F664 /* AppDelegate.swift */,
 				69A0F56A22AEFF3C000977BB /* MovieSwift.entitlements */,
 				69FFAF9422A9A0DF00801F3C /* views */,
 				69FFAF8522A99F1200801F3C /* Assets.xcassets */,
@@ -983,8 +994,10 @@
 				69861EF322D072D500F9882E /* PeopleImage.swift in Sources */,
 				69FB61E822BA2A2D00CBEEC7 /* CustomListDetail.swift in Sources */,
 				69CD111F22D09DD900C5D89D /* PeopleDetailHeaderRow.swift in Sources */,
+				188CA1EA2D5BA6890008F664 /* AdView.swift in Sources */,
 				69E3260222D1DE81003749B1 /* PeopleDetailMovieRow.swift in Sources */,
 				695882CB22AD2C4700AFABA9 /* MovieOverview.swift in Sources */,
+				188CA1E82D5BA5710008F664 /* AppDelegate.swift in Sources */,
 				6912B51122BE0F78005E51D4 /* BigMoviePosterImage.swift in Sources */,
 				69861EF822D07ED300F9882E /* PeopleDetail.swift in Sources */,
 				69B8655322E0BB0200D2C975 /* MovieContextMenu.swift in Sources */,
@@ -1019,6 +1032,7 @@
 				6902647B22B6D2B400459C2E /* MovieKeywordList.swift in Sources */,
 				697C5C2522B6434A00BAE7B5 /* MovieReviews.swift in Sources */,
 				6953B50922D36B8800859723 /* MovieBackdropImage.swift in Sources */,
+				18DAAE322D5BB81000FBB53E /* BannerAdView.swift in Sources */,
 				69FB61E622BA245100CBEEC7 /* DraggableCover.swift in Sources */,
 				69E7DD4B23DF22BF00DEAEA9 /* Video.swift in Sources */,
 				691F7A0C22E6D9D800755E44 /* GenresList.swift in Sources */,
@@ -1235,7 +1249,7 @@
 				CURRENT_PROJECT_VERSION = 1400;
 				DERIVE_UIKITFORMAC_PRODUCT_BUNDLE_IDENTIFIER = NO;
 				DEVELOPMENT_ASSET_PATHS = "MovieSwift/Preview\\ Content";
-				DEVELOPMENT_TEAM = Z6P74P6T99;
+				DEVELOPMENT_TEAM = 44VHM66V89;
 				ENABLE_PREVIEWS = YES;
 				INFOPLIST_FILE = MovieSwift/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
@@ -1245,12 +1259,15 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 0.7;
-				PRODUCT_BUNDLE_IDENTIFIER = "com.thomasricouard.film-o-matic";
-				"PRODUCT_BUNDLE_IDENTIFIER[sdk=macosx*]" = "maccatalyst.com.thomasricouard.film-o-matic";
+				PRODUCT_BUNDLE_IDENTIFIER = com.adster.usdk;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				"PROVISIONING_PROFILE_SPECIFIER[sdk=macosx*]" = "";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SUPPORTS_UIKITFORMAC = YES;
+				SUPPORTS_XR_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_OBJC_BRIDGING_HEADER = "MovieSwift/MovieSwift-Bridging-Header.h";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2,6";
@@ -1269,7 +1286,7 @@
 				CURRENT_PROJECT_VERSION = 1400;
 				DERIVE_UIKITFORMAC_PRODUCT_BUNDLE_IDENTIFIER = NO;
 				DEVELOPMENT_ASSET_PATHS = "MovieSwift/Preview\\ Content";
-				DEVELOPMENT_TEAM = Z6P74P6T99;
+				DEVELOPMENT_TEAM = 44VHM66V89;
 				ENABLE_PREVIEWS = YES;
 				INFOPLIST_FILE = MovieSwift/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
@@ -1279,12 +1296,15 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 0.7;
-				PRODUCT_BUNDLE_IDENTIFIER = "com.thomasricouard.film-o-matic";
-				"PRODUCT_BUNDLE_IDENTIFIER[sdk=macosx*]" = "maccatalyst.com.thomasricouard.film-o-matic";
+				PRODUCT_BUNDLE_IDENTIFIER = com.adster.usdk;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				"PROVISIONING_PROFILE_SPECIFIER[sdk=macosx*]" = "";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SUPPORTS_UIKITFORMAC = YES;
+				SUPPORTS_XR_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_OBJC_BRIDGING_HEADER = "MovieSwift/MovieSwift-Bridging-Header.h";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2,6";
