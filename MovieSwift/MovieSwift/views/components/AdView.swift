@@ -24,6 +24,10 @@ struct AdView: View {
             viewModel.loadAdActivity(key: "gam_banner_0")
         }
         
+        Button("Show Native Ad") {
+            viewModel.loadAdActivity(key: "gam_native_0")
+        }
+        
         if let bannerView = viewModel.bannerView {
             bannerView
         }
@@ -73,7 +77,33 @@ class AdViewModel: ObservableObject, MediationAdDelegate {
     }
     
     func onNativeAdLoaded(nativeAd: any AdsFramework.MediationNativeAd) {
+        nativeAd.eventDelegate = self
+        let bundle = Bundle(for: MediationNativeAdView.self)
+        let nib = UINib(nibName: "NativeView", bundle: bundle)
+        guard let adView = nib.instantiate(withOwner: nil, options: nil).first as? MediationNativeAdView else { return }
         
+        (adView.bodyView as? UILabel)?.text = nativeAd.body
+        (adView.headlineView as? UILabel)?.text = nativeAd.headline
+        (adView.ctaView as? UIButton)?.setTitle(nativeAd.callToAction, for: .normal)
+        (adView.ctaView as? UIButton)?.isUserInteractionEnabled = false
+        adView.setNativeAd(nativeAd: nativeAd)
+        if let mediaView = nativeAd.mediaView {
+            addMediaViewToParentView(childView: mediaView, parentView: adView.mediaView)
+        }
+        addBannerViewToView(adView)
+    }
+    
+    func addMediaViewToParentView(childView: UIView, parentView: UIView) {
+           childView.backgroundColor = .red // Just to visualize
+           childView.translatesAutoresizingMaskIntoConstraints = false
+           parentView.addSubview(childView)
+
+           NSLayoutConstraint.activate([
+               childView.leadingAnchor.constraint(equalTo: parentView.leadingAnchor),
+               childView.trailingAnchor.constraint(equalTo: parentView.trailingAnchor),
+               childView.topAnchor.constraint(equalTo: parentView.topAnchor),
+               childView.bottomAnchor.constraint(equalTo: parentView.bottomAnchor)
+           ])
     }
     
     func onCustomNativeAdLoaded(customNativeAd: any AdsFramework.MediationNativeCustomFormatAd) {
@@ -122,5 +152,9 @@ extension AdViewModel: MediationRewardedAdEventDelegate {
 }
 
 extension AdViewModel: MediationBannerAdEventDelegate {
+    
+}
+
+extension AdViewModel: MediationNativeAdEventDelegate {
     
 }
