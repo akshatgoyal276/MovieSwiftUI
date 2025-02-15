@@ -145,35 +145,18 @@
 		69FFAFAA22A9AA6500801F3C /* MoviesState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69FFAFA922A9AA6500801F3C /* MoviesState.swift */; };
 		69FFAFAC22A9AABB00801F3C /* MoviesReducer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69FFAFAB22A9AABB00801F3C /* MoviesReducer.swift */; };
 		69FFAFAE22A9AB1D00801F3C /* MoviesActions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69FFAFAD22A9AB1D00801F3C /* MoviesActions.swift */; };
-		C3ECF5522D60A23A006D1735 /* AdsFramework.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C3ECF54C2D60A1B3006D1735 /* AdsFramework.framework */; platformFilter = ios; };
-		C3ECF5532D60A23A006D1735 /* AdsFramework.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = C3ECF54C2D60A1B3006D1735 /* AdsFramework.framework */; platformFilter = ios; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		C3ECF5582D60AF1B006D1735 /* AdsFramework.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = C3ECF5572D60AF1B006D1735 /* AdsFramework.xcframework */; };
+		C3ECF5592D60AF1B006D1735 /* AdsFramework.xcframework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = C3ECF5572D60AF1B006D1735 /* AdsFramework.xcframework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
 
-/* Begin PBXContainerItemProxy section */
-		C3ECF54B2D60A1B3006D1735 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = C3ECF4B22D60A1B3006D1735 /* AdsFramework.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = 8F42D4DD2D48DDC30069C5D8;
-			remoteInfo = AdsFramework;
-		};
-		C3ECF54D2D60A1B3006D1735 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = C3ECF4B22D60A1B3006D1735 /* AdsFramework.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = 8F42D4E72D48DDC30069C5D8;
-			remoteInfo = AdsFrameworkTests;
-		};
-/* End PBXContainerItemProxy section */
-
 /* Begin PBXCopyFilesBuildPhase section */
-		C3ECF5542D60A23A006D1735 /* Embed Frameworks */ = {
+		C3ECF55A2D60AF1B006D1735 /* Embed Frameworks */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 2147483647;
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				C3ECF5532D60A23A006D1735 /* AdsFramework.framework in Embed Frameworks */,
+				C3ECF5592D60AF1B006D1735 /* AdsFramework.xcframework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -292,7 +275,7 @@
 		69FFAFA922A9AA6500801F3C /* MoviesState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoviesState.swift; sourceTree = "<group>"; };
 		69FFAFAB22A9AABB00801F3C /* MoviesReducer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoviesReducer.swift; sourceTree = "<group>"; };
 		69FFAFAD22A9AB1D00801F3C /* MoviesActions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoviesActions.swift; sourceTree = "<group>"; };
-		C3ECF4B22D60A1B3006D1735 /* AdsFramework.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = AdsFramework.xcodeproj; path = "../../../../ios-sdk/AdsFramework/AdsFramework.xcodeproj"; sourceTree = "<group>"; };
+		C3ECF5572D60AF1B006D1735 /* AdsFramework.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; name = AdsFramework.xcframework; path = "../../orchestration-sdk-ios/Frameworks/AdsFramework.xcframework"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -310,7 +293,7 @@
 			files = (
 				69D3321223ED608400C8A20C /* UI in Frameworks */,
 				69D3321023ED608400C8A20C /* Backend in Frameworks */,
-				C3ECF5522D60A23A006D1735 /* AdsFramework.framework in Frameworks */,
+				C3ECF5582D60AF1B006D1735 /* AdsFramework.xcframework in Frameworks */,
 				69FB7D7B22E7957200C55F01 /* SwiftUIFlux in Frameworks */,
 				69F336CD22EDA77500282CE3 /* CloudKit.framework in Frameworks */,
 			);
@@ -368,7 +351,7 @@
 		69305F6322CFBF9900C4FE07 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				C3ECF4B22D60A1B3006D1735 /* AdsFramework.xcodeproj */,
+				C3ECF5572D60AF1B006D1735 /* AdsFramework.xcframework */,
 				69F336CC22EDA77500282CE3 /* CloudKit.framework */,
 			);
 			name = Frameworks;
@@ -821,15 +804,6 @@
 			path = actions;
 			sourceTree = "<group>";
 		};
-		C3ECF4B32D60A1B3006D1735 /* Products */ = {
-			isa = PBXGroup;
-			children = (
-				C3ECF54C2D60A1B3006D1735 /* AdsFramework.framework */,
-				C3ECF54E2D60A1B3006D1735 /* AdsFrameworkTests.xctest */,
-			);
-			name = Products;
-			sourceTree = "<group>";
-		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -860,7 +834,7 @@
 				69FFAF7822A99F1100801F3C /* Sources */,
 				69FFAF7922A99F1100801F3C /* Frameworks */,
 				69FFAF7A22A99F1100801F3C /* Resources */,
-				C3ECF5542D60A23A006D1735 /* Embed Frameworks */,
+				C3ECF55A2D60AF1B006D1735 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
@@ -908,12 +882,6 @@
 			);
 			productRefGroup = 69FFAF7D22A99F1100801F3C /* Products */;
 			projectDirPath = "";
-			projectReferences = (
-				{
-					ProductGroup = C3ECF4B32D60A1B3006D1735 /* Products */;
-					ProjectRef = C3ECF4B22D60A1B3006D1735 /* AdsFramework.xcodeproj */;
-				},
-			);
 			projectRoot = "";
 			targets = (
 				69FFAF7B22A99F1100801F3C /* MovieSwift */,
@@ -921,23 +889,6 @@
 			);
 		};
 /* End PBXProject section */
-
-/* Begin PBXReferenceProxy section */
-		C3ECF54C2D60A1B3006D1735 /* AdsFramework.framework */ = {
-			isa = PBXReferenceProxy;
-			fileType = wrapper.framework;
-			path = AdsFramework.framework;
-			remoteRef = C3ECF54B2D60A1B3006D1735 /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-		C3ECF54E2D60A1B3006D1735 /* AdsFrameworkTests.xctest */ = {
-			isa = PBXReferenceProxy;
-			fileType = wrapper.cfbundle;
-			path = AdsFrameworkTests.xctest;
-			remoteRef = C3ECF54D2D60A1B3006D1735 /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-/* End PBXReferenceProxy section */
 
 /* Begin PBXResourcesBuildPhase section */
 		69414A0A23C33FBE0056FBDF /* Resources */ = {
